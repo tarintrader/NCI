@@ -1,0 +1,280 @@
+/* Reusable CSS */
+:root {
+   --base-color: #f6f4fb;
+   --text-color: black;
+   --scrollup-color: #37194d;
+   --logo-color: black;
+}
+
+.darkmode {
+   --base-color: black;
+   --text-color: white;
+   --scrollup-color: #815199;
+   --logo-color: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+}
+
+
+#theme-switch {
+   height: 25px;
+   width: 25px;
+   margin-left: 10px;
+   padding: 0;
+   border: none;
+   background-color: transparent;
+   justify-content: center;
+   align-items: center;
+}
+
+#theme-switch svg {
+   fill: darkslategrey;
+}
+
+#theme-switch svg:hover {
+   fill: black;
+}
+
+#theme-switch svg:last-child {
+   display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+   display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+   display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+   color: var(--text-color);
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+   text-decoration: none;
+}
+
+.btn-1 {
+   color: white;
+   background: linear-gradient(to right, #2d133a, #37194dd5);
+   border: 2px solid #1d002b; /* Adds a border with the same color as the darker gradient */
+   border-radius: 5px; /* Optional: makes the corners slightly rounded */
+   padding: 10px 20px; /* Optional: adds spacing inside the button */
+   font-weight: bold;
+   height: 50px;
+   text-decoration: none;
+}
+
+.btn-1:hover {
+   background: linear-gradient(to left, #2d133a, #37194dd5);
+   font-size: 105%;
+}
+
+.btn-2 {
+   color: white;
+   background: linear-gradient(to right, #815199, #00000069);
+   border: 2px solid #1d002b; 
+   border-radius: 5px; 
+   padding: 10px 20px;
+   font-weight: bold;
+   height: 50px;
+   text-decoration: none;
+}
+
+.btn-2:hover {
+   background: linear-gradient(to right, #815199, #00000069);
+   font-size: 105%;
+}
+
+
+
+/* Body */
+body {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+ .navbar {
+    background-color: #e1d9f2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030; 
+    font-weight: 500;
+ }
+
+ .navbar-brand {
+    font-weight: bold;
+    font-size: x-large;
+ }
+
+ .margin-to-navbar {
+    margin-top: 100px !important;
+ }
+
+ /* Hide brand text in smaller devices */
+ @media screen and (max-width: 550px) {
+   .navbar-brand {
+      font-size: 0;
+   }
+ }
+
+ /* Footer */
+
+footer {
+    bottom: 0 !important;
+    margin-top: auto !important;
+    position: relative !important;
+   }
+
+footer .nav-link {
+   color: var(--text-color);
+}
+.bi {
+   color: var(--text-color);
+}
+
+
+.filter-white{
+   filter: var(--logo-color);
+}
+
+
+/* Styles for the maps iframe */
+.map {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+/* Testimonials Carousel */
+ .testimonials {
+    padding: 40px 40px 80px 40px;
+ }
+
+ .testimonials .carousel {
+    max-width: 800px;
+ }
+
+ .testimonials .carousel-item {
+    max-height: 600px;
+ }
+
+ .carousel-item .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .testimonial-img {
+    height: 150px;
+    width: 150px;
+    margin: 10px 10px 20px 10px;
+ }
+
+ .testimonial-text {
+    max-width: 70%;
+    font-size: 20px;
+    font-style: italic;
+ }
+
+ .testimonial-info{
+    font-weight: bold;
+    text-align: center;
+ }
+
+ .testimonial-info p {
+    margin-bottom: 0;
+ }
+
+ .client-name {
+    font-size: 1.2rem;
+ }
+
+ .client-info {
+    font-size: 0.9rem;
+    color: #656060;
+ }
+
+ .carousel-control-prev-icon {
+   background-color: var(--text-color) !important; 
+}
+
+ @media screen and (max-width: 800px) {
+    .testimonial-img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .testimonial-text {
+        font-size: 18px;
+    }
+ }
+
+ /* Scroll Up Button */
+ .scrollup {
+   display: none;
+ }
+
+ .show-scrollup {
+    position: fixed;
+    z-index: 1030;
+    right: 0.5rem;
+    bottom: 90px;
+    font-size: larger;
+    color: var(--scrollup-color);
+    display: block;
+ }
+
+/* Team section*/
+.team-img {
+   height: 150px;
+   width: 150px;
+   margin: 10px 10px 20px 10px;
+}
+
+.team-card {
+   background-color: #d796f710;
+}
+
+.card {
+   color: var(--text-color);
+   background-color: #d796f710;
+}
+
+
+.btn-services {
+   width: 140px;
+}
+.btn-services:hover {
+   width: 140px;
+}
+
+/* Services section*/
+
+.service-details {
+   background-color: #d796f710;
+   border-radius: 50px;
+   border: 1px solid #1d002b;
+   color: var(--text-color);
+}
+
+.service-img {
+   width: 80%;
+   border-radius: 50px;
+
+}
